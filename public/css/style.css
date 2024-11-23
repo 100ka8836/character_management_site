@@ -1,0 +1,317 @@
+/* ベーススタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdf6f5;
+  color: #5c403d;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fffdfc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  text-align: center;
+  color: #e27b72;
+}
+
+/* テーブルスタイル */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #f4c2bb;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #e27b72;
+  color: white;
+  cursor: pointer;
+}
+
+th a {
+  color: inherit; /* 一貫性を保つ */
+  text-decoration: none;
+}
+
+th a:hover {
+  text-decoration: underline;
+}
+
+tr:nth-child(even) {
+  background-color: #fffdfc;
+}
+
+tr:hover {
+  background-color: #f4c2bb;
+  color: #fff;
+}
+
+/* タブのスタイル */
+.tabs {
+  display: flex;
+  border-bottom: 2px solid #f4c2bb;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: #fffdfc;
+  margin-right: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab.active {
+  background-color: #e27b72;
+  color: white;
+  font-weight: bold;
+  border-bottom: 2px solid #fffdfc;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* フォームスタイル */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* 各フォーム要素間の間隔 */
+}
+
+form label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #5c403d;
+}
+
+form input,
+form select {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #f4c2bb;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #e27b72;
+  box-shadow: 0 0 5px rgba(226, 123, 114, 0.25);
+  outline: none;
+}
+
+form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #e27b72;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+form button:hover {
+  background-color: #c5635b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* メッセージボックス */
+.message-box {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.message-box.success {
+  border: 1px solid #28a745;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message-box.error {
+  border: 1px solid #dc3545;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* フォームコンテナ */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fffdfc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ナビゲーションバー */
+.navbar {
+  background-color: #c5635b;
+  padding: 15px 20px;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar .navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: auto; /* 左寄せ */
+  text-decoration: none; /* デフォルトでリンクスタイルを除去 */
+  cursor: default; /* ホバー時にカーソルを変更しない */
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #e27b72;
+}
+
+/* タブ間の余白 */
+.tab-container {
+  margin-top: 30px;
+}
+
+/* プルダウンスタイル */
+form select {
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #f8d7da;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  outline: none;
+}
+
+/* 検索フォームのスタイル */
+.search-form {
+  display: flex; /* 横並びにする */
+  align-items: center; /* 垂直方向の中央揃え */
+  gap: 10px; /* フィールドとボタンの間隔 */
+  margin-bottom: 20px; /* フォーム全体の下に余白 */
+}
+
+.search-form input[type="text"] {
+  flex: 1; /* 検索窓を広げる */
+  max-width: 400px; /* 必要に応じて最大幅を設定 */
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #f4c2bb;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search-form button {
+  padding: 8px 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #e27b72;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #c5635b;
+}
+
+.action-buttons-container {
+  display: flex;
+  justify-content: flex-end; /* 右寄せにする */
+  margin-bottom: 20px;
+}
+
+.action-button {
+  font-size: 15px;
+  color: #fff;
+  background-color: #f4c2bb;
+  border: none;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #e27b72;
+}
+
+.complete-mode-btn {
+  font-size: 15px;
+  color: #fff;
+  background-color: #8be099;
+  border: none;
+  border-radius: 4px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.complete-mode-btn:hover {
+  background-color: #398a46;
+}
+
+.character-name {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.action-button {
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-left: 5px;
+  color: white;
+  background-color: #e27b72;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: #c5635b;
+}
